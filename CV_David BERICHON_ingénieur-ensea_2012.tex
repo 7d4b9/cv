@@ -1,0 +1,210 @@
+% Taille de la police du CV et le format
+\documentclass[11pt,a4paper,final]{cv}
+
+% Un certain nombre de packages sont déjà  inclus par la classe CV
+\usepackage[francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{csquotes}
+\usepackage[T1]{fontenc}
+
+% Langue
+\Language{francais}
+
+% Méta-données PDF
+\hypersetup{
+    pdfauthor   = {David BERICHON},     % C'est vous qui avez fait le PDF
+    pdftitle    = {Curriculum Vitae},
+%    pdfsubject  = {},
+%    pdfkeywords = {},
+    pdfcreator  = {PDFLaTeX},           % Vous l'avez fait avec LateX !
+    pdfproducer = {PDFLaTeX}
+}
+
+% Couleur des liens hypertextes, si vous voulez les faire ressortir
+\definecolor{urlcolor}{rgb}{0, 0, 0.5}
+
+% Version (0 = simple, devrait rentrer sur une page et 1 = détaillé)
+% Par défaut, tout est inclus dans la version simple sauf les cours (\Course{}).
+% Pour n'inclure un élément que dans la version détaillée, ajouter l'argument [\detailedOnly]
+% (cela n'est toutefois pas implémenté partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
+\Detailed{0}
+% Marges
+\geometry{
+    hmargin=2.3cm,            % Marges gauche-droite
+    vmargin=2.5cm                % Marges haut-bas
+}
+
+% Largeur de la colonne de gauche
+\setlength{\colwidth}{2.5cm}
+
+% Espacements
+\smallskipamount=1mm    % Espace entre les différents entrées d'une section
+\medskipamount=3mm        % Espace entre les sections
+\bigskipamount=5mm        % Espace entre le chapeau et l'objectif ou la première section
+
+\begin{document}
+
+% Le CV commence ici
+%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\textbf{INGENIEUR ENSEA Promotion 2012}
+\vspace{3mm}
+\end{center}
+% Chapeau (= informations personnelles)
+\begin{heading}
+        \Name{David \bsc{Bérichon}}
+    \Address{
+        72, Rue Jean Bleuzen\\
+        92~170 Vanves}
+    \Telephone{(+33)~6~59~47~08~23}
+    \Email{berichon.david@bbox.fr}        % Un lien hypertexte est automatiquement créé pour l'Email
+        \Nationality{Française}
+        \DateOfBirth{12 février 1984}
+        \Age{32}
+        \Gender{M}    % M = Masculin, F = Féminin. Est utilisé pour savoir s'il faut écrire Né ou Née par exemple ;-)
+        \MaritalStatus{Célibataire}
+    \Mobility{Permis B}
+    %\Photo{../logo.jpg}    % Vous pouvez choisir de mettre une photo ou pas.
+    %\Photo{photo.JPG}    % Vous pouvez choisir de mettre une photo ou pas.
+        % sa dimension est sans importance, au final sa hauteur est fixée à  3cm
+        % et son rapport hauteur/largeur est concervé.
+        % Meilleure est sa résolution, mieux c'est !
+\end{heading}
+% Objectif (optionnel)
+\begin{objective}
+Ingénieur logiciel C/C++ et GO
+\end{objective}
+% Première section
+     \begin{section}{Expérience professionnelle}
+     \begin{entry}
+        \Date{depuis ~~~Mai-2015}
+        \Duration{16 mois}
+        \Place{\bsc{Ingénieur Développement C++/Golang}}
+        \Place{\href{https://www.ercom.fr}{\bsc{ERCOM-Cryptobox}} \bsc{Ingénieur développeur GO et C++. Domaine de la sécurité :  solution de partage collaboratif avec chiffrement de bout en bout}}
+        \Locality{Issy-Les-Moulineaux}
+        \Country{France}
+        \Activity{- Développements en C++11}
+        \Activity{- Portage C++11 vers Golang du framework (backend et son SDK multi-plateformes iOS, Androïd, Windows, Web) : En interaction avec une API REST : gestion de sessions utilisateur authentifiées, traitements cryptographiques, implémentation de protocoles propriétaires, synchronisation multi-clients, gestion notifications}
+        \Activity{- Génération du code SDK pour Java, Swift, C\# et JavaScript depuis GO : gomobile, jsonrpc, gopherjs}
+        \Activity{- Développement CLI sous la forme d'un shell interactif}
+        \Activity{- Tests d'intégration avec RobotFramework + Python}
+        \Activity{- Correction de bugs}
+        \Activity{- Utilisation de Docker, Github, JIRA, Confluence, Jenkins}
+    \end{entry}
+    \begin{entry}
+        \Date{Sept-2012  Mai-2015}
+        \Duration{29 mois}
+        \Place{\href{http://www.vitec.com/}{\bsc{VITEC~MULTIMEDIA}} \bsc{Ingénieur Logiciel} (département software dans le domaine de l'encodage et du streaming vidéo embarqué et temps réel)}
+        \Locality{Châtillon-Montrouge}
+        \Country{France}
+        \Activity{- Conception et développement de logiciels applicatifs de haut niveau, cross-plateforme et multithread C/C++ sous linux}
+        \Activity{- Portage du Framework Qt4 sur processeur Intel Atom et développement d'une IHM basée sur Qt}
+    \end{entry}
+    \begin{entry}
+        \Date{2012}
+        \Duration{6 mois}
+        \Place{\href{http://www.psa-peugeot-citroen.com/}{\bsc{PSA peugeot-citroën}} - R\&D \enquote{DRD/DRIA/MTPE/ERMP/EEL}}
+        \Locality{La Garenne Colombe - Paris}
+        \Country{France}        
+        \Activity{- Mise en place d'un environnement de développement logiciel applicatif pour prototypage rapide d'IHM en C++}
+        \Activity{- Personnalisation de systèmes d'exploitation Linux, scripts en BASH}
+        \Activity{- Développement d'une IHM en C++ basée sur Qt}
+        \Activity{- Documentation technique, formation des usagers, test et validation logiciel de l'IHM}
+    \end{entry}
+    \begin{entry}
+        \Date{2011}
+        \Duration{6 mois}
+            \Place{\href{http://www.momagroup.com/}{\bsc{MOMA~(Modélisation, Mesures et Applications)}} - Applications logicielles linux C/C++ : client embarqué (ARM9) et serveur}
+        \Locality{Paris VIII}
+        \Country{France}
+            \Activity{- Modélisation UML}
+            \Activity{- Planification, spécifications, développements, mise en recette}
+            \Activity{- Documentation}
+            \Activity{- Sur processeur ARM9, adaptation noyau linux et device driver pour modems (CPL, GPRS) + thermomètre USB}
+            \Activity{- Intégration modules kernel}
+    \end{entry}
+\end{section}
+\newpage
+\begin{section}{Formation}
+   \begin{entry}
+        % Commence une nouvelle entrée
+        \Date{2013 (5 days)}
+        % Il est possible d'ajouter des liens hypertextes n'importe où.
+        \Place{\href{http://free-electrons.com/}{\bsc{Free Electrons}}}
+        \Locality{Paris (On-site sessions)}
+        \Country{France}
+        \Activity{\href{http://free-electrons.com/training/kernel/}{\textbf{Embedded Linux kernel and driver development training}}}
+                \Course{Configuring, compiling and booting the kernel and its modules}
+                \Course{Memory management and accessing hardware - Character device drivers}
+                \Course{Processes, scheduling, waiting for resources and interrupt management, Locking}
+                \Course{Porting the Linux kernel to a new hardware platform}
+                \Course{Working with the community}
+   \end{entry}
+   \begin{entry} % Commence une nouvelle entrée
+       \Date{2008 -- 2011}
+           % Il est possible d'ajouter des liens hypertextes n'importe à.
+           \Place{\href{http://www.ensea.fr/}{\bsc{école Nationale Supérieure de l'électronique et de ses Applications (ENSEA)}}}
+       \Locality{Cergy}
+       \Country{France}
+       \Activity{\textbf{2011 : Spécialisation IS (Informatique et Systèmes)}}
+           \Course{Architecture des circuits intégrés numériques}
+           \Course{Méthodologie de conception (FPGA, ASIC, CPLD, PLA)}
+           \Course{SoC et SoPC}
+           \Course{Protocoles et architectures des réseaux}
+           \Course{Architectures et processeurs parallèles}
+           \Course{Système Unix}
+           \Course{Mécanismes internes de Windows}
+           \Course{Système de gestion de bases de données}
+           \Course{Génie logiciel}
+           \Course{Programmation orientée objets - UML}
+           \Course{Algorithmique}
+   \end{entry}
+   \begin{entry}
+   \Activity{\textbf{2010 : Spécialisation STC (Signal, Temps réel et Communication)}}
+           \Course{Systèmes de Communication}
+           \Course{Analyse spectrale et traitement d'antennes}
+           \Course{Théorie de la Communication}
+           \Course{Traitement du signal temps réel}
+           \Course{Traitement numérique du signal}
+           \Course{Détection/Estimation}
+           \Course{Filtrage adaptatif}
+           \Course{Systèmes de Reconnaissance}
+   \end{entry}
+   \begin{entry}
+       \Date{2003 -- 2008}
+       \Place{\href{http://www.univ-reunion.fr/}{\bsc{Université de La Réunion}}}
+       \Activity{2003 - 2004 : DEUG1 STPI (Sciences et technologies pour l'industrie)}
+       \Activity{2004 - 2005 : DEUG1 MIAS (Mathématiques et Informatique Appliqués aux Sciences)}
+       \Activity{2005 - 2008 : LICENCE PHYSIQUE}
+   \end{entry}
+\end{section}
+
+\begin{section}{Diplômes et langues}
+   \singleEntry{$\cdot$ \bsc{Free Electron} : Embedded Linux kernel and driver development}
+   \singleEntry{$\cdot$ Ingénieur ENSEA}
+   \singleEntry{$\cdot$ DEUG Physique}
+   \singleEntry{$\cdot$ Baccalauréat série S spécialité physique}
+
+   \smallSkip
+   \begin{entry}
+       \Skill{Français~:}
+       \Activity{Langue maternelle}
+   \end{entry}
+   \begin{entry}
+       \Skill{Anglais~:}
+       \Activity{Parlé et écrit courant}
+       \Activity{Diplômé du \href{http://www.fr.toeic.eu/index.php?id=2761}{TOEIC}}
+   \end{entry}
+   \end{section}
+
+
+\begin{section}{Loisirs et activités}
+    \singleEntry{$\cdot$ Sports : Trail/Course à pied (Marathon De Paris, Saintélyon, 6000D), natation}
+    \singleEntry{$\cdot$ Cinema, musique : cor d'harmonie, niveau 3eme cycle de conservatoire}
+    \singleEntry{$\cdot$ Informatique, internet, nouvelles technologies}
+\end{section}
+
+% Le CV termine ici
+%%%%%%%%%%%%%%%%%%%
+
+\end{document}
