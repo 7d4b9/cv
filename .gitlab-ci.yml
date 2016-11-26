@@ -1,0 +1,6 @@
+build_pdf:
+  image: headgeekette/latex
+  script: texliveonfly CV_David-BERICHON_ingénieur-ensea_2012.tex
+  artifacts:
+    paths: 
+      - CV_David-BERICHON_ingénieur-ensea_2012.pdf 
