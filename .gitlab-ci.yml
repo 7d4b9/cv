@@ -1,6 +1,6 @@
 build_pdf:
-  image: moss/xelatex
-  script: xelatex CV_David-BERICHON_ingénieur-ensea_2012.tex
+  image: blang/latex:ubuntu
+  script: latexmk -cd -f -interaction=batchmode -pdf CV_David-BERICHON_ingénieur-ensea_2012.tex
   artifacts:
     paths: 
-      - CV_David-BERICHON_ingénieur-ensea_2012.pdf 
+      - CV_David-BERICHON_ingénieur-ensea_2012.pdf

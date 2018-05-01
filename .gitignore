@@ -1,3 +1,7 @@
 *.aux
 *.log
 *.pdf
+*.fls
+*fdb_latexmk
+*.synctex.gz
+__latexindent_temp*

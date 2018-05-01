@@ -1,205 +1,255 @@
 % Taille de la police du CV et le format
-\documentclass[11pt,a4paper,final]{cv}
+\documentclass[11pt,a4paper, final]{cv}
 
-% Un certain nombre de packages sont dÈj‡  inclus par la classe CV
-\usepackage[francais]{babel}
-\usepackage[latin1]{inputenc}
-\usepackage{csquotes}
-\usepackage[T1]{fontenc}
+    % Un certain nombre de packages sont d√©j√†  inclus par la classe CV
+    \usepackage[francais]{babel}
+    \usepackage[latin1,utf8]{inputenc}
+    \usepackage[T2A,T1]{fontenc} 
+    \usepackage{csquotes}
 
-% Langue
-\Language{francais}
+    \Language{francais}
 
-% MÈta-donnÈes PDF
-\hypersetup{
-    pdfauthor   = {David BERICHON},     % C'est vous qui avez fait le PDF
-    pdftitle    = {Curriculum Vitae},
-%    pdfsubject  = {},
-%    pdfkeywords = {},
-    pdfcreator  = {PDFLaTeX},           % Vous l'avez fait avec LateX !
-    pdfproducer = {PDFLaTeX}
-}
+    % M√©ta-donn√©es PDF
+    \hypersetup{
+        pdfauthor   = {David BERICHON},     % C'est vous qui avez fait le PDF
+        pdftitle    = {Curriculum Vitae},
+    %    pdfsubject  = {},
+    %    pdfkeywords = {},
+        pdfcreator  = {PDFLaTeX},           % Vous l'avez fait avec LateX !
+        pdfproducer = {PDFLaTeX}
+    }
 
-% Couleur des liens hypertextes, si vous voulez les faire ressortir
-\definecolor{urlcolor}{rgb}{0, 0, 0.5}
+    % Couleur des liens hypertextes, si vous voulez les faire ressortir
+    \definecolor{urlcolor}{rgb}{0, 0, 0.5}
+    
+    % Version (0 = simple, devrait rentrer sur une page et 1 = d√©taill√©)
+    % Par d√©faut, tout est inclus dans la version simple sauf les cours (\Course{}).
+    % Pour n'inclure un √©l√©ment que dans la version d√©taill√©e, ajouter l'argument [\detailedOnly]
+    % (cela n'est toutefois pas impl√©ment√© partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
+    \Detailed{0}
+    % Marges
+    \geometry{
+        hmargin=2.3cm,            % Marges gauche-droite
+        vmargin=2.5cm                % Marges haut-bas
+    }
 
-% Version (0 = simple, devrait rentrer sur une page et 1 = dÈtaillÈ)
-% Par dÈfaut, tout est inclus dans la version simple sauf les cours (\Course{}).
-% Pour n'inclure un ÈlÈment que dans la version dÈtaillÈe, ajouter l'argument [\detailedOnly]
-% (cela n'est toutefois pas implÈmentÈ partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
-\Detailed{0}
-% Marges
-\geometry{
-    hmargin=2.3cm,            % Marges gauche-droite
-    vmargin=2.5cm                % Marges haut-bas
-}
+    % Largeur de la colonne de gauche
+    \setlength{\colwidth}{2.5cm}
 
-% Largeur de la colonne de gauche
-\setlength{\colwidth}{2.5cm}
+    % Espacements
+    \smallskipamount=1mm    % Espace entre les diff√©rents entr√©es d'une section
+    \medskipamount=3mm        % Espace entre les sections
+    \bigskipamount=5mm        % Espace entre le chapeau et l'objectif ou la premi√®re section
 
-% Espacements
-\smallskipamount=1mm    % Espace entre les diffÈrents entrÈes d'une section
-\medskipamount=3mm        % Espace entre les sections
-\bigskipamount=5mm        % Espace entre le chapeau et l'objectif ou la premiËre section
-
-\begin{document}
+    \begin{document}
 
 % Le CV commence ici
 %%%%%%%%%%%%%%%%%%%%
 \begin{center}
-\textbf{INGENIEUR ENSEA Promotion 2012}
-\vspace{3mm}
+    \textbf{ING√âNIEUR ENSEA Promotion 2012}
+    \vspace{3mm}
 \end{center}
+
 % Chapeau (= informations personnelles)
 \begin{heading}
-        \Name{David \bsc{BÈrichon}}
+
+    \Name{David \bsc{Berichon}}
     \Address{
-        72, Rue Jean Bleuzen\\
-        92~170 Vanves}
+    72, Rue Jean Bleuzen    92~170 Vanves}
     \Telephone{(+33)~6~59~47~08~23}
-    \Email{berichon.david@bbox.fr}        % Un lien hypertexte est automatiquement crÈÈ pour l'Email
-        \Nationality{FranÁaise}
-        \DateOfBirth{12 fÈvrier 1984}
-        \Age{32}
-        \Gender{M}    % M = Masculin, F = FÈminin. Est utilisÈ pour savoir s'il faut Ècrire NÈ ou NÈe par exemple ;-)
-        \MaritalStatus{CÈlibataire}
+    \Email{berichon.david@bbox.fr}        % Un lien hypertexte est automatiquement cr√©e pour l'Email
+    \Nationality{Fran√ßaise}
+    \DateOfBirth{12 f√©vrier 1984}
+    \Age{34}
+    \Gender{M}    % M = Masculin, F = F√©minin. Est utilis√© pour savoir s'il faut √©crire N√© ou N√©e par exemple ;-)
+    % \MaritalStatus{C√©libataire}
     \Mobility{Permis B}
     %\Photo{../logo.jpg}    % Vous pouvez choisir de mettre une photo ou pas.
     %\Photo{photo.JPG}    % Vous pouvez choisir de mettre une photo ou pas.
-        % sa dimension est sans importance, au final sa hauteur est fixÈe ‡  3cm
-        % et son rapport hauteur/largeur est concervÈ.
-        % Meilleure est sa rÈsolution, mieux c'est !
+    % sa dimension est sans importance, au final sa hauteur est fix√©e √† 3cm
+    % et son rapport hauteur/largeur est concerv√©.
+    % Meilleure est sa r√©solution, mieux c'est !
+
 \end{heading}
+
 % Objectif (optionnel)
 \begin{objective}
-IngÈnieur logiciel C/C++ et GO
+    Ing√©nieur de D√©veloppement Back-End (Golang)
 \end{objective}
-% PremiËre section
-     \begin{section}{ExpÈrience professionnelle}
-     \begin{entry}
-        \Date{depuis ~~~Mai-2015}
+
+% Premi√®re section
+\begin{section}{Exp√®rience professionnelle}
+
+    \begin{entry}
+
+        \Date{depuis ~~~Mars-2016}
+        \Duration{13 mois}
+        \Place{\bsc{Ing√©nieur de d√©veloppement Back-End GO}}
+        \Place{\href{https://oyst.com}{\bsc{Oyst 1-Click}} \bsc{Ing√©nieur de d√©veloppement Back-End GO}. Architecture microservice sur AWS. Domaine du paiement}
+        \Locality{Paris}
+        \Country{France}
+
+        \Activity{- R√©f√©rent GO et d√©veloppeur des workers en lien avec le paiement: design logiciel et impl√©m√©ntation}
+        \Activity{- Traitement en microservices GO des flux Kafka/Redis}
+        \Activity{- API REST ou gRPC}
+        \Activity{- Mise en place workflow et tests d'int√©gration, BDD en Cucumber}
+        \Activity{- Maintiens, support et am√©liorations continue du code}
+        \Activity{- Environment Docker, Github, Aws, Terraform}
+        \Activity{- Refactorisation compl√®te de tous les worker Go}
+        \Activity{- Bases de donn√©e Postgres}
+        \Activity{- M√©thodologie Scrum}
+
+    \end{entry}
+
+    \begin{entry}
+
+        \Date{Sept-2012  Mars-2016}
         \Duration{16 mois}
-        \Place{\bsc{IngÈnieur DÈveloppement C++/Golang}}
-        \Place{\href{https://www.ercom.fr}{\bsc{ERCOM-Cryptobox}} \bsc{IngÈnieur dÈveloppeur GO et C++. Domaine de la sÈcuritÈ :  solution de partage collaboratif avec chiffrement de bout en bout}}
+        \Place{\bsc{Ing√©nieur D√©veloppement C++/Golang}}
+        \Place{\href{https://www.ercom.fr}{\bsc{ERCOM-Cryptobox}} \bsc{Ing√©nieur d√©veloppeur GO et C++. Domaine de la s√©curit√© :  solution de partage collaboratif avec chiffrement de bout en bout}}
         \Locality{Issy-Les-Moulineaux}
         \Country{France}
-        \Activity{- DÈveloppements en C++11}
-        \Activity{- Portage C++11 vers Golang du framework (backend et son SDK multi-plateformes iOS, AndroÔd, Windows, Web) : En interaction avec une API REST : gestion de sessions utilisateur authentifiÈes, traitements cryptographiques, implÈmentation de protocoles propriÈtaires, synchronisation multi-clients, gestion notifications}
-        \Activity{- GÈnÈration du code SDK pour Java, Swift, C\# et JavaScript depuis GO : gomobile, jsonrpc, gopherjs}
-        \Activity{- DÈveloppement CLI sous la forme d'un shell interactif}
-        \Activity{- Tests d'intÈgration avec RobotFramework + Python}
-        \Activity{- Correction de bugs}
-        \Activity{- Utilisation de Docker, Github, JIRA, Confluence, Jenkins}
+        \Activity{- Conception et planification des d√©veloppements}
+        \Activity{- Portage C++11 vers GO et √©volution d'un framework backend et d'un SDK multi-plateformes (iOS, Andro√Ød, Windows, Web). En interaction avec une API REST : gestion de sessions utilisateur authentifi√©es, traitements cryptographiques, impl√©mentation de protocoles propri√©taires, synchronisation multi-clients, notifications}
+        \Activity{- G√©n√©ration du code SDK pour Java, Swift, C\# et JavaScript depuis GO : gomobile, jsonrpc, gopherjs}
+        \Activity{- D√©veloppement d'un CLI sous la forme d'un shell interactif √©crit en GO}
+        \Activity{- Tests d'int√©gration avec RobotFramework + Python}
+        \Activity{- Gestion de tickets et correction de bugs}
+        \Activity{- Environment Docker, Gitlab, JIRA, Confluence, Jenkins, Scrum}
+        \Activity{- M√©thodologie Scrum}
+
     \end{entry}
+
     \begin{entry}
         \Date{Sept-2012  Mai-2015}
         \Duration{29 mois}
-        \Place{\href{http://www.vitec.com/}{\bsc{VITEC~MULTIMEDIA}} \bsc{IngÈnieur Logiciel} (dÈpartement software dans le domaine de l'encodage et du streaming vidÈo embarquÈ et temps rÈel)}
-        \Locality{Ch‚tillon-Montrouge}
+        \Place{\href{http://www.vitec.com/}{\bsc{VITEC~MULTIMEDIA}} \bsc{Ing√©nieur Logiciel} (d√©partement software dans le domaine de l'encodage et du streaming vid√©o embarqu√© et temps r√©el)}
+        \Locality{Ch√¢tillon-Montrouge}
         \Country{France}
-        \Activity{- Conception et dÈveloppement de logiciels applicatifs de haut niveau, cross-plateforme et multithread C/C++ sous linux}
-        \Activity{- Portage du Framework Qt4 sur processeur Intel Atom et dÈveloppement d'une IHM basÈe sur Qt}
+        \Activity{- Conception et d√©veloppement de logiciels applicatifs de haut niveau, cross-plateforme et multithread C/C++ sous linux}
+        \Activity{- Portage du Framework Qt4 sur processeur Intel Atom et d√©veloppement d'une IHM bas√©e sur Qt}
     \end{entry}
+
     \begin{entry}
+
         \Date{2012}
         \Duration{6 mois}
-        \Place{\href{http://www.psa-peugeot-citroen.com/}{\bsc{PSA peugeot-citroÎn}} - R\&D \enquote{DRD/DRIA/MTPE/ERMP/EEL}}
+        \Place{\href{http://www.psa-peugeot-citroen.com/}{\bsc{PSA peugeot-citro√´n}} - R\&D \enquote{DRD/DRIA/MTPE/ERMP/EEL}}
         \Locality{La Garenne Colombe - Paris}
         \Country{France}        
-        \Activity{- Mise en place d'un environnement de dÈveloppement logiciel applicatif pour prototypage rapide d'IHM en C++}
-        \Activity{- Personnalisation de systËmes d'exploitation Linux, scripts en BASH}
-        \Activity{- DÈveloppement d'une IHM en C++ basÈe sur Qt}
+        \Activity{- Mise en place d'un environnement de d√©veloppement logiciel applicatif pour prototypage rapide d'IHM en C++}
+        \Activity{- Personnalisation de syst√®mes d'exploitation Linux, scripts en BASH}
+        \Activity{- D√©veloppement d'une IHM en C++ bas√©e sur Qt}
         \Activity{- Documentation technique, formation des usagers, test et validation logiciel de l'IHM}
+        \Activity{- M√©thodologie Scrum}
+
     \end{entry}
+
     \begin{entry}
+
         \Date{2011}
         \Duration{6 mois}
-            \Place{\href{http://www.momagroup.com/}{\bsc{MOMA~(ModÈlisation, Mesures et Applications)}} - Applications logicielles linux C/C++ : client embarquÈ (ARM9) et serveur}
+        \Place{\href{http://www.momagroup.com/}{\bsc{MOMA~(Mod√©lisation, Mesures et Applications)}} - Applications logicielles linux C/C++ : client embarqu√© (ARM9) et serveur}
         \Locality{Paris VIII}
         \Country{France}
-            \Activity{- ModÈlisation UML}
-            \Activity{- Planification, spÈcifications, dÈveloppements, mise en recette}
-            \Activity{- Documentation}
-            \Activity{- Sur processeur ARM9, adaptation noyau linux et device driver pour modems (CPL, GPRS) + thermomËtre USB}
-            \Activity{- IntÈgration modules kernel}
+
+        \Activity{- Mod√©lisation UML}
+        \Activity{- Planification, sp√©cifications, d√©veloppements, mise en recette}
+        \Activity{- Documentation}
+        \Activity{- Sur processeur ARM9, adaptation noyau linux et device driver pour modems (CPL, GPRS) + thermom√®tre USB}
+        \Activity{- Int√©gration modules kernel}
+
     \end{entry}
+
 \end{section}
 \newpage
 \begin{section}{Formation}
-   \begin{entry}
-        % Commence une nouvelle entrÈe
+
+    \begin{entry}
+
         \Date{2013 (5 days)}
-        % Il est possible d'ajouter des liens hypertextes n'importe o˘.
         \Place{\href{http://free-electrons.com/}{\bsc{Free Electrons}}}
         \Locality{Paris (On-site sessions)}
         \Country{France}
         \Activity{\href{http://free-electrons.com/training/kernel/}{\textbf{Embedded Linux kernel and driver development training}}}
-                \Course{Configuring, compiling and booting the kernel and its modules}
-                \Course{Memory management and accessing hardware - Character device drivers}
-                \Course{Processes, scheduling, waiting for resources and interrupt management, Locking}
-                \Course{Porting the Linux kernel to a new hardware platform}
-                \Course{Working with the community}
-   \end{entry}
-   \begin{entry} % Commence une nouvelle entrÈe
-       \Date{2008 -- 2011}
-           % Il est possible d'ajouter des liens hypertextes n'importe ‡.
-           \Place{\href{http://www.ensea.fr/}{\bsc{Ècole Nationale SupÈrieure de l'Èlectronique et de ses Applications (ENSEA)}}}
-       \Locality{Cergy}
-       \Country{France}
-       \Activity{\textbf{2011 : SpÈcialisation IS (Informatique et SystËmes)}}
-           \Course{Architecture des circuits intÈgrÈs numÈriques}
-           \Course{MÈthodologie de conception (FPGA, ASIC, CPLD, PLA)}
-           \Course{SoC et SoPC}
-           \Course{Protocoles et architectures des rÈseaux}
-           \Course{Architectures et processeurs parallËles}
-           \Course{SystËme Unix}
-           \Course{MÈcanismes internes de Windows}
-           \Course{SystËme de gestion de bases de donnÈes}
-           \Course{GÈnie logiciel}
-           \Course{Programmation orientÈe objets - UML}
-           \Course{Algorithmique}
-   \end{entry}
-   \begin{entry}
-   \Activity{\textbf{2010 : SpÈcialisation STC (Signal, Temps rÈel et Communication)}}
-           \Course{SystËmes de Communication}
-           \Course{Analyse spectrale et traitement d'antennes}
-           \Course{ThÈorie de la Communication}
-           \Course{Traitement du signal temps rÈel}
-           \Course{Traitement numÈrique du signal}
-           \Course{DÈtection/Estimation}
-           \Course{Filtrage adaptatif}
-           \Course{SystËmes de Reconnaissance}
-   \end{entry}
-   \begin{entry}
-       \Date{2003 -- 2008}
-       \Place{\href{http://www.univ-reunion.fr/}{\bsc{UniversitÈ de La RÈunion}}}
-       \Activity{2003 - 2004 : DEUG1 STPI (Sciences et technologies pour l'industrie)}
-       \Activity{2004 - 2005 : DEUG1 MIAS (MathÈmatiques et Informatique AppliquÈs aux Sciences)}
-       \Activity{2005 - 2008 : LICENCE PHYSIQUE}
-   \end{entry}
+
+        \Course{Configuring, compiling and booting the kernel and its modules}
+        \Course{Memory management and accessing hardware - Character device drivers}
+        \Course{Processes, scheduling, waiting for resources and interrupt management, Locking}
+        \Course{Porting the Linux kernel to a new hardware platform}
+        \Course{Working with the community}
+
+    \end{entry}
+
+    \begin{entry}
+        \Date{2008 -- 2011}
+        \Place{\href{http://www.ensea.fr/}{\bsc{√âcole Nationale Sup√©rieure de l'√âlectronique et de ses Applications (ENSEA)}}}
+        \Locality{Cergy}
+        \Country{France}
+        \Activity{\textbf{2011 : Sp√©cialisation IS (Informatique et Syst√®mes)}}
+
+        \Course{Architecture des circuits int√©gr√©s num√©riques}
+        \Course{M√©thodologie de conception (FPGA, ASIC, CPLD, PLA)}
+        \Course{SoC et SoPC}
+        \Course{Protocoles et architectures des r√©seaux}
+        \Course{Architectures et processeurs parall√®les}
+        \Course{Syst√®me Unix}
+        \Course{M√©canismes internes de Windows}
+        \Course{Syst√®me de gestion de bases de donn√©es}
+        \Course{G√©nie logiciel}
+        \Course{Programmation orient√©e objets - UML}
+        \Course{Algorithmique}
+    \end{entry}
+
+    \begin{entry}
+
+        \Activity{\textbf{2010 : Sp√©cialisation STC (Signal, Temps r√©el et Communication)}}
+
+        \Course{Syst√®mes de Communication}
+        \Course{Analyse spectrale et traitement d'antennes}
+        \Course{Th√©orie de la Communication}
+        \Course{Traitement du signal temps r√©el}
+        \Course{Traitement num√©rique du signal}
+        \Course{D√©tection/Estimation}
+        \Course{Filtrage adaptatif}
+        \Course{Syst√®mes de Reconnaissance}
+
+    \end{entry}
+
+    \begin{entry}
+        \Date{2003 -- 2008}
+        \Place{\href{http://www.univ-reunion.fr/}{\bsc{Universit√© de La R√©union}}}
+        \Activity{2003 - 2004 : DEUG1 STPI (Sciences et technologies pour l'industrie)}
+        \Activity{2004 - 2005 : DEUG1 MIAS (Math√©matiques et Informatique Appliqu√©s aux Sciences)}
+        \Activity{2005 - 2008 : LICENCE PHYSIQUE}
+    \end{entry} 
+
 \end{section}
 
-\begin{section}{DiplÙmes et langues}
-   \singleEntry{$\cdot$ \bsc{Free Electron} : Embedded Linux kernel and driver development}
-   \singleEntry{$\cdot$ IngÈnieur ENSEA}
-   \singleEntry{$\cdot$ DEUG Physique}
-   \singleEntry{$\cdot$ BaccalaurÈat sÈrie S spÈcialitÈ physique}
+\begin{section}{Dipl√¥mes et langues}
 
-   \smallSkip
-   \begin{entry}
-       \Skill{FranÁais~:}
-       \Activity{Langue maternelle}
-   \end{entry}
-   \begin{entry}
-       \Skill{Anglais~:}
-       \Activity{ParlÈ et Ècrit courant}
-       \Activity{DiplÙmÈ du \href{http://www.fr.toeic.eu/index.php?id=2761}{TOEIC}}
-   \end{entry}
-   \end{section}
+    \singleEntry{$\cdot$ \bsc{Free Electron} : Embedded Linux kernel and driver development}
+    \singleEntry{$\cdot$ Ing√©nieur ENSEA}
+    \singleEntry{$\cdot$ DEUG Physique}
+    \singleEntry{$\cdot$ Baccalaur√©at s√©rie S sp√©cialit√© physique}
+    
+    \smallSkip
 
+    \begin{entry}
+        \Skill{Fran√ßais~:}
+        \Activity{Langue maternelle}
+    \end{entry}
 
-\begin{section}{Loisirs et activitÈs}
-    \singleEntry{$\cdot$ Sports : Trail/Course ‡ pied (Marathon De Paris, SaintÈlyon, 6000D), natation}
+    \begin{entry}
+        \Skill{Anglais~:}
+        \Activity{Parl√© et √©crit courant}
+        \Activity{Dipl√¥me du \href{http://www.fr.toeic.eu/index.php?id=2761}{TOEIC}}
+    \end{entry}
+
+\end{section}
+
+\begin{section}{Loisirs et activit√©s}
+    \singleEntry{$\cdot$ Sports : Trail/Course √† pied (Marathon De Paris, Saint√©lyon, 6000D), natation}
     \singleEntry{$\cdot$ Cinema, musique : cor d'harmonie, niveau 3eme cycle de conservatoire}
     \singleEntry{$\cdot$ Informatique, internet, nouvelles technologies}
 \end{section}
