@@ -1,47 +1,47 @@
 % Taille de la police du CV et le format
 \documentclass[11pt,a4paper, final]{cv}
 
-    % Un certain nombre de packages sont déjà  inclus par la classe CV
-    \usepackage[francais]{babel}
-    \usepackage[latin1,utf8]{inputenc}
-    \usepackage[T2A,T1]{fontenc} 
-    \usepackage{csquotes}
+% Un certain nombre de packages sont déjà  inclus par la classe CV
+\usepackage[francais]{babel}
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage{csquotes}
 
-    \Language{francais}
+\Language{francais}
 
-    % Méta-données PDF
-    \hypersetup{
-        pdfauthor   = {David BERICHON},     % C'est vous qui avez fait le PDF
-        pdftitle    = {Curriculum Vitae},
-    %    pdfsubject  = {},
-    %    pdfkeywords = {},
-        pdfcreator  = {PDFLaTeX},           % Vous l'avez fait avec LateX !
-        pdfproducer = {PDFLaTeX}
-    }
+% Méta-données PDF
+\hypersetup{
+    pdfauthor   = {David BERICHON},     % C'est vous qui avez fait le PDF
+    pdftitle    = {Curriculum Vitae},
+%    pdfsubject  = {},
+%    pdfkeywords = {},
+    pdfcreator  = {PDFLaTeX},           % Vous l'avez fait avec LateX !
+    pdfproducer = {PDFLaTeX}
+}
 
-    % Couleur des liens hypertextes, si vous voulez les faire ressortir
-    \definecolor{urlcolor}{rgb}{0, 0, 0.5}
-    
-    % Version (0 = simple, devrait rentrer sur une page et 1 = détaillé)
-    % Par défaut, tout est inclus dans la version simple sauf les cours (\Course{}).
-    % Pour n'inclure un élément que dans la version détaillée, ajouter l'argument [\detailedOnly]
-    % (cela n'est toutefois pas implémenté partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
-    \Detailed{0}
-    % Marges
-    \geometry{
-        hmargin=2.3cm,            % Marges gauche-droite
-        vmargin=2.5cm                % Marges haut-bas
-    }
+% Couleur des liens hypertextes, si vous voulez les faire ressortir
+\definecolor{urlcolor}{rgb}{0, 0, 0.5}
 
-    % Largeur de la colonne de gauche
-    \setlength{\colwidth}{2.5cm}
+% Version (0 = simple, devrait rentrer sur une page et 1 = détaillé)
+% Par défaut, tout est inclus dans la version simple sauf les cours (\Course{}).
+% Pour n'inclure un élément que dans la version détaillée, ajouter l'argument [\detailedOnly]
+% (cela n'est toutefois pas implémenté partout, votre nom par exemple ne peut pas ne pas figurer dans la version simple)
+\Detailed{0}
+% Marges
+\geometry{
+    hmargin=2.3cm,            % Marges gauche-droite
+    vmargin=2.5cm                % Marges haut-bas
+}
 
-    % Espacements
-    \smallskipamount=1mm    % Espace entre les différents entrées d'une section
-    \medskipamount=3mm        % Espace entre les sections
-    \bigskipamount=5mm        % Espace entre le chapeau et l'objectif ou la première section
+% Largeur de la colonne de gauche
+\setlength{\colwidth}{2.5cm}
 
-    \begin{document}
+% Espacements
+\smallskipamount=1mm    % Espace entre les différents entrées d'une section
+\medskipamount=3mm        % Espace entre les sections
+\bigskipamount=5mm        % Espace entre le chapeau et l'objectif ou la première section
+
+\begin{document}
 
 % Le CV commence ici
 %%%%%%%%%%%%%%%%%%%%
@@ -52,7 +52,6 @@
 
 % Chapeau (= informations personnelles)
 \begin{heading}
-
     \Name{David \bsc{Berichon}}
     \Address{
     72, Rue Jean Bleuzen    92~170 Vanves}
@@ -74,22 +73,34 @@
 
 % Objectif (optionnel)
 \begin{objective}
-    Ingénieur de Développement Back-End (Golang)
+    Senior Ingeneer Developper (Golang)
 \end{objective}
 
 % Première section
 \begin{section}{Expèrience professionnelle}
 
     \begin{entry}
-        \Date{Mars-2017  Mai-2018}
-        \Duration{15 mois}
-        \Place{\bsc{Ingénieur développeur Back-End GO}}
-        \Place{\href{https://oyst.com}{\bsc{Oyst 1-Click}} \bsc{Ingénieur de développement Back-End GO}. Architecture microservice sur AWS. Domaine du paiement}
+        \Date{Novembre-2018  Février-2019}
+        \Duration{4 mois}
+        \Place{\bsc{Senior Backend Developper}}
+        \Place{\href{https://jobteaser.com}{\bsc{Jobteaser}} \bsc{Senior Backend Developper}. Architecture microservice}
         \Locality{Paris}
         \Country{France}
+        \Activity{- Backends Golang, Kafka et gRPC}
+        \Activity{- CI groovy/Jenkins}
+        \Activity{- BDD godog}
+        \Activity{- Docker, K8s}
+    \end{entry}
 
-        \Activity{- Référent GO et développeur des workers en lien avec le paiement: design logiciel et impléméntation}
-        \Activity{- Microservices en GO, flux Kafka/Redis}
+    \begin{entry}
+        \Date{Mars-2017  Mai-2018}
+        \Duration{15 mois}
+        \Place{\bsc{Ingénieur développeur Back-End Golang}}
+        \Place{\href{https://oyst.com}{\bsc{Oyst 1-Click}} \bsc{Ingénieur de développement Back-End Golang}. Architecture microservice sur AWS}
+        \Locality{Paris}
+        \Country{France}
+        \Activity{- Référent Golang et développeur des workers en lien avec le paiement: design logiciel et impléméntation}
+        \Activity{- Backends Golang, flux Kafka/Redis}
         \Activity{- Mise en place CI et tests d'intégration, BDD en Cucumber}
         \Activity{- Environment Docker, Github, Aws, Terraform, Postgres}
     \end{entry}
@@ -98,13 +109,13 @@
         \Date{Mai-2015  Mars-2017}
         \Duration{22 mois}
         \Place{\bsc{Ingénieur Développement C++/Golang}}
-        \Place{\href{https://www.ercom.fr}{\bsc{ERCOM-Cryptobox}} \bsc{Ingénieur développeur GO et C++. Domaine de la sécurité :  solution de partage collaboratif avec chiffrement de bout en bout}}
+        \Place{\href{https://www.ercom.fr}{\bsc{ERCOM-Cryptobox}} \bsc{Ingénieur développeur Golang et C++. Domaine de la sécurité :  solution de partage collaboratif avec chiffrement de bout en bout}}
         \Locality{Issy-Les-Moulineaux}
         \Country{France}
-        \Activity{- Portage C++11 vers GO du backend existant et d'un SDK multi-plateformes (iOS, Androïd, Windows, Web). En interaction avec une API REST : gestion de sessions utilisateur authentifiées, traitements cryptographiques, implémentation de protocoles propriétaires, synchronisation multi-clients, notifications}
-        \Activity{- Génération du code SDK pour Java, Swift, C\# et JavaScript depuis GO : gomobile, jsonrpc, gopherjs}
+        \Activity{- Portage C++11 vers Golang du backend existant et d'un SDK multi-plateformes (iOS, Androïd, Windows, Web). En interaction avec une API REST : gestion de sessions utilisateur authentifiées, traitements cryptographiques, implémentation de protocoles propriétaires, synchronisation multi-clients, notifications}
+        \Activity{- Génération du code SDK pour Java, Swift, C\# et JavaScript depuis Golang : gomobile, jsonrpc, gopherjs}
         \Activity{- Tests d'intégration avec RobotFramework + Python}
-        \Activity{- Développement d'un CLI en GO}
+        \Activity{- Développement d'un CLI en Golang}
         \Activity{- Environment Docker, Gitlab, JIRA, Confluence, Jenkins, Scrum}
     \end{entry}
 
@@ -123,7 +134,7 @@
         \Duration{6 mois}
         \Place{\href{http://www.psa-peugeot-citroen.com/}{\bsc{PSA peugeot-citroën}} - R\&D \enquote{DRD/DRIA/MTPE/ERMP/EEL}}
         \Locality{La Garenne Colombe - Paris}
-        \Country{France}        
+        \Country{France}
         \Activity{- Mise en place d'un environnement de développement logiciel applicatif pour prototypage rapide d'IHM en C++}
         \Activity{- Personnalisation de systèmes d'exploitation Linux, scripts en BASH}
         \Activity{- Développement d'une IHM en C++ basée sur Qt}
@@ -142,32 +153,26 @@
     \end{entry}
 
 \end{section}
-\newpage
+
 \begin{section}{Formation}
-
     \begin{entry}
-
         \Date{2013 (5 days)}
         \Place{\href{http://free-electrons.com/}{\bsc{Free Electrons}}}
         \Locality{Paris (On-site sessions)}
         \Country{France}
         \Activity{\href{http://free-electrons.com/training/kernel/}{\textbf{Embedded Linux kernel and driver development training}}}
-
         \Course{Configuring, compiling and booting the kernel and its modules}
         \Course{Memory management and accessing hardware - Character device drivers}
         \Course{Processes, scheduling, waiting for resources and interrupt management, Locking}
         \Course{Porting the Linux kernel to a new hardware platform}
         \Course{Working with the community}
-
     \end{entry}
-
     \begin{entry}
         \Date{2008 -- 2011}
         \Place{\href{http://www.ensea.fr/}{\bsc{École Nationale Supérieure de l'Électronique et de ses Applications (ENSEA)}}}
         \Locality{Cergy}
         \Country{France}
         \Activity{\textbf{2011 : Spécialisation IS (Informatique et Systèmes)}}
-
         \Course{Architecture des circuits intégrés numériques}
         \Course{Méthodologie de conception (FPGA, ASIC, CPLD, PLA)}
         \Course{SoC et SoPC}
@@ -180,11 +185,8 @@
         \Course{Programmation orientée objets - UML}
         \Course{Algorithmique}
     \end{entry}
-
     \begin{entry}
-
         \Activity{\textbf{2010 : Spécialisation STC (Signal, Temps réel et Communication)}}
-
         \Course{Systèmes de Communication}
         \Course{Analyse spectrale et traitement d'antennes}
         \Course{Théorie de la Communication}
@@ -193,48 +195,34 @@
         \Course{Détection/Estimation}
         \Course{Filtrage adaptatif}
         \Course{Systèmes de Reconnaissance}
-
     \end{entry}
-
     \begin{entry}
         \Date{2003 -- 2008}
         \Place{\href{http://www.univ-reunion.fr/}{\bsc{Université de La Réunion}}}
         \Activity{2003 - 2004 : DEUG1 STPI (Sciences et technologies pour l'industrie)}
         \Activity{2004 - 2005 : DEUG1 MIAS (Mathématiques et Informatique Appliqués aux Sciences)}
         \Activity{2005 - 2008 : LICENCE PHYSIQUE}
-    \end{entry} 
-
+    \end{entry}
 \end{section}
-
 \begin{section}{Diplômes et langues}
-
     \singleEntry{$\cdot$ \bsc{Free Electron} : Embedded Linux kernel and driver development}
     \singleEntry{$\cdot$ Ingénieur ENSEA}
     \singleEntry{$\cdot$ DEUG Physique}
     \singleEntry{$\cdot$ Baccalauréat série S spécialité physique}
-    
     \smallSkip
-
     \begin{entry}
         \Skill{Français~:}
         \Activity{Langue maternelle}
     \end{entry}
-
     \begin{entry}
         \Skill{Anglais~:}
         \Activity{Parlé et écrit courant}
         \Activity{Diplôme du \href{http://www.fr.toeic.eu/index.php?id=2761}{TOEIC}}
     \end{entry}
-
 \end{section}
-
 \begin{section}{Loisirs et activités}
     \singleEntry{$\cdot$ Sports : Trail/Course à pied (Marathon De Paris, Saintélyon, 6000D), natation}
     \singleEntry{$\cdot$ Cinema, musique : cor d'harmonie, niveau 3eme cycle de conservatoire}
     \singleEntry{$\cdot$ Informatique, internet, nouvelles technologies, vélos électriques}
 \end{section}
-
-% Le CV termine ici
-%%%%%%%%%%%%%%%%%%%
-
 \end{document}
