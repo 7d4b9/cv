@@ -1,6 +1,6 @@
 build_pdf:
-  image: blang/latex:ubuntu
-  script: latexmk -cd -f -interaction=batchmode -pdf CV_David-BERICHON_ingénieur-ensea_2012.tex
+  image: dbndev/docker-make:latest
+  script: make
   artifacts:
-    paths: 
-      - CV_David-BERICHON_ingénieur-ensea_2012.pdf
+    paths:
+      - CV_David-BERICHON_ingénieur-ensea_2012.pdfw
